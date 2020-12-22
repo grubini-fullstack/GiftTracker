@@ -1,0 +1,11 @@
+.sidemenu {
+  color: white;
+}
+.shell {
+  cursor: pointer;
+  padding: 4% 2%;
+}
+
+.shell:hover {
+  background:rgba(255,255,255, 0.1);
+}
