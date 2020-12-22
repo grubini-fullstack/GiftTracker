@@ -12,4 +12,8 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onLogin() {
+    console.log('hey how are you')
+  }
+
 }
