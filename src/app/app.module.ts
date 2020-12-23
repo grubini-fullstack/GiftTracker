@@ -5,25 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { NavComponent } from './dashboard/nav/nav.component';
+import { NavComponent } from './nav/nav.component';
 import { MaincontentComponent } from './dashboard/maincontent/maincontent.component';
-import { ProductComponent } from './product/product.component';
-import { WatchlistComponent } from './watchlist/watchlist.component';
-import { WishlistComponent } from './wishlist/wishlist.component';
+import { ProductComponent } from './dashboard/product/product.component';
+import { WatchlistComponent } from './dashboard/watchlist/watchlist.component';
+import { WishlistComponent } from './dashboard/wishlist/wishlist.component';
 import { BirthdaytrackerComponent } from './birthdaytracker/birthdaytracker.component';
-import { OrderComponent } from './order/order.component';
+import { OrderComponent } from './dashboard/order/order.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './account/profile/profile.component';
 import { NotificationComponent } from './account/notification/notification.component';
 import { HistoryComponent } from './account/history/history.component';
 import { PaymentComponent } from './account/payment/payment.component';
+import { FootComponent } from './foot/foot.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'product', component: ProductComponent },
+  { path: 'products', component: ProductComponent },
   { path: 'watchlist', component: WatchlistComponent },
   { path: 'wishlist', component: WishlistComponent },
+  { path: 'birthdaytracker', component: BirthdaytrackerComponent },
   { path: 'orders', component: OrderComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'notifications', component: NotificationComponent },
@@ -36,6 +38,7 @@ const appRoutes: Routes = [
     AppComponent,
     BirthdaytrackerComponent,
     DashboardComponent,
+    FootComponent,
     HistoryComponent,
     LoginComponent,
     MaincontentComponent,
