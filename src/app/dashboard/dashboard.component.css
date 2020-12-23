@@ -10,16 +10,7 @@ footer {
   flex-direction: column;
 
 }
-.bodyfooter {
-  flex: 1;
-  padding: 1%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.endfooter {
-  text-align: center;
-  color: gray;
-  background-color: #242742;
-}
+
 
 .container-fluid {
   padding: 0;
@@ -175,4 +166,98 @@ footer {
   width: 90%;
   object-fit: contain;
   position: absolute;
+}
+
+.bodyfooter {
+  flex: 1;
+  padding: 1%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.endfooter {
+  text-align: center;
+  color: gray;
+  background-color: #242742;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.logo > a {
+  display: flex;
+  color: white;
+  letter-spacing: 2px;
+  align-items: flex-end;
+  text-decoration: none;
+}
+.content {
+  flex: 3;
+  display: flex;
+}
+.started {
+  flex: 1;
+}
+.about {
+  flex: 1;
+}
+.support {
+  flex: 1;
+}
+.social {
+  flex: 2;
+}
+
+.started, .about, .support {
+  display: flex;
+  text-align: justify;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.started > ul > h6, .about > ul > h6, .support > ul > h6 {
+  color: white;
+}
+
+.started > ul, .about > ul, .support > ul {
+  color: grey;
+  list-style: none;
+  padding-left: 0;
+}
+.started > ul > li, .about > ul > li, .support > ul > li {
+  margin: 6% 0;
+}
+.started > ul > li:hover, .about > ul > li:hover, .support > ul > li:hover {
+  color: white;
+ }
+
+.innersocial {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+.icon {
+  height: 35px;
+  width: 35px;
+}
+.fa {
+  margin-bottom: 4%;
+  height: 25px;
+  width: 25px;
+}
+
+.button {
+  width: 40%;
+  padding: 2%;
+  margin: 4% auto;
+  text-align: center;
+  border-radius: 40px;
+  background-color: #8CA1FF;
+}
+.button:hover {
+  background-color: #A3A3C6;
 }
