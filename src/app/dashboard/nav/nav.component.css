@@ -43,9 +43,10 @@ h5{
 .dropdown-content {
   right: 0;
   z-index: 10;
+  display: none;
   min-width: 160px;
   padding: 12px 16px;
-  display: none;
+  border-radius: 6px;
   position: absolute;
   background-color: #454555;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
