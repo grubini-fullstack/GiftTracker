@@ -9,6 +9,11 @@ import { NavComponent } from './dashboard/nav/nav.component';
 import { SidemenuComponent } from './dashboard/sidemenu/sidemenu.component';
 import { MaincontentComponent } from './dashboard/maincontent/maincontent.component';
 import { MenuitemComponent } from './dashboard/sidemenu/menuitem/menuitem.component';
+import { ProductComponent } from './product/product.component';
+import { WatchlistComponent } from './watchlist/watchlist.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { BirthdaytrackerComponent } from './birthdaytracker/birthdaytracker.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { MenuitemComponent } from './dashboard/sidemenu/menuitem/menuitem.compon
     NavComponent,
     SidemenuComponent,
     MaincontentComponent,
-    MenuitemComponent
+    MenuitemComponent,
+    ProductComponent,
+    WatchlistComponent,
+    WishlistComponent,
+    BirthdaytrackerComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
