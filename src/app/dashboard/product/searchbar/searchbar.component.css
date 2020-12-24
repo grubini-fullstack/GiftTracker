@@ -1,0 +1,43 @@
+input {
+  flex: 1;
+  padding: 0 2%;
+  border-radius: 8px 0 0 8px;
+}
+input:focus {
+  outline: none;
+}
+
+.mainwrapper {
+  height: 46px;
+  width: 600px;
+  display: inline-block;
+  border-radius: 8px;
+}
+.innerwrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  border-radius: 8px;
+}
+.overlay {
+  display: flex;
+  cursor: pointer;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  height: 98%;
+  opacity: 0.8;
+  padding: 0 2%;
+  border-radius: 0 8px 8px 0;
+  background-color:#8CA1FF;
+}
+.overlay:hover {
+  background-color:#2D2F4B;
+}
+
+.icon {
+  padding: 0;
+  margin: 0;
+  height: 27px;
+  width: 26px;
+}
