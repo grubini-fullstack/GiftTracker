@@ -18,6 +18,10 @@ import { NotificationComponent } from './account/notification/notification.compo
 import { HistoryComponent } from './account/history/history.component';
 import { PaymentComponent } from './account/payment/payment.component';
 import { FootComponent } from './foot/foot.component';
+import { SearchbarComponent } from './dashboard/product/searchbar/searchbar.component';
+import { ItemComponent } from './dashboard/watchlist/item/item.component';
+import { RetailerComponent } from './dashboard/product/retailer/retailer.component';
+import { ProductDetailComponent } from './dashboard/product/product-detail/product-detail.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
@@ -50,6 +54,10 @@ const appRoutes: Routes = [
     OrderComponent,
     WatchlistComponent,
     WishlistComponent,
+    SearchbarComponent,
+    ItemComponent,
+    RetailerComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
