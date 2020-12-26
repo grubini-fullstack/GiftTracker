@@ -29,10 +29,7 @@ h5{
   width: 65px;
 }
 .location {
-  height: 100%;
-  display: flex;
   cursor: pointer;
-  align-items: center;
 }
 .location > img {
   height: 50px;
@@ -57,6 +54,8 @@ h5{
 }
 .dropdown-content > a {
   color: white;
+  padding: 6%;
+  text-decoration: none;
 }
 .dropdown-content > a:hover {
   color: black;
@@ -64,5 +63,6 @@ h5{
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }

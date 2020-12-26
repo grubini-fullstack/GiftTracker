@@ -1,4 +1,12 @@
 <main>
   <app-searchbar class="search"></app-searchbar>
-  <app-item></app-item>
+  <section class="maingrid">
+    <div class="productdetail">
+      <app-product-detail></app-product-detail>
+    </div>
+
+    <div class="retailers">
+      <app-retailer *ngFor="let retailer of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"></app-retailer>
+    </div>
+  </section>
 </main>

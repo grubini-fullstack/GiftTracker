@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-foot',
   templateUrl: './foot.component.html',
-  styleUrls: ['./foot.component.css']
+  styleUrls: ['./foot.component.scss']
 })
 export class FootComponent implements OnInit {
 
