@@ -1,0 +1,15 @@
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagedetail > img {
+  width: 100%;
+  object-fit: fill;
+}
+.description {
+  flex: 1;
+  padding: 4%;
+}
