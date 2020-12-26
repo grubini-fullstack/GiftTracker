@@ -47,6 +47,8 @@ $text-lighter: rgba(255,255,255,0.9);
   list-style: none;
   position: relative;
   cursor: pointer;
+  background: transparent;
+  border-radius: $spacing-l;
 }
 
 .card:before{
