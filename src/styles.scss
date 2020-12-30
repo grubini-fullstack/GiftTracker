@@ -5,3 +5,33 @@ html, body {
   position: relative;
   background: linear-gradient(90deg, rgba(95,99,130,1) 0%, rgba(83,86,114,1) 0%, rgba(70,73,96,1) 50%, rgba(60,62,83,1) 100%);
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  right: 0;
+  z-index: 10;
+  display: none;
+  min-width: 160px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  position: absolute;
+  background-color: #454555;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content > a {
+  color: white;
+  padding: 6%;
+  text-decoration: none;
+}
+.dropdown-content > a:hover {
+  color: black;
+  background-color: rgba(255, 255, 255 , 0.2);
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}

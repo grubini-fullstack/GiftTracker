@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +24,7 @@ import { SearchbarComponent } from './dashboard/product/searchbar/searchbar.comp
 import { ItemComponent } from './dashboard/watchlist/item/item.component';
 import { RetailerComponent } from './dashboard/product/retailer/retailer.component';
 import { ProductDetailComponent } from './dashboard/product/product-detail/product-detail.component';
+
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
@@ -62,6 +65,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

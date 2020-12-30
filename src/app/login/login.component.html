@@ -10,28 +10,49 @@
   <div class="wrapper">
     <div class="signup">
       <img class="login_simulator" src="https://grubini-images.s3.amazonaws.com/gifttracker/login_simulator.png" />
-      <button type="button" class="sign_btn btn btn-dark">Sign up</button>
+      <button
+              type="button"
+              (click)="onSignUp()"
+              class="sign_btn btn btn-dark">Sign up</button>
     </div>
     <!-- <div class="divider div-transparent"></div> -->
-    <div class="login">
+    <form
+          class="login"
+          (ngSubmit)="onLogin(authForm)"
+          #authForm="ngForm">
       <div class="login_form col-10">
         <img id="logo" src="https://grubini-images.s3.amazonaws.com/gifttracker/gift-box.png" />
         <div class="control">
-          <label class="form-label">Email address</label>
-          <input type="email" class="form-control" />
+          <label
+                 for="username"
+                 class="form-label">Username</label>
+          <input
+                 ngModel
+                 required
+                 type="text"
+                 name="username"
+                 class="form-control" />
         </div>
         <div class="control">
-          <label class="form-label">Password</label>
-          <input type="password" class="form-control" />
+          <label
+                 for="password"
+                 class="form-label">Password</label>
+          <input
+                 ngModel
+                 required
+                 minlength="6"
+                 name="password"
+                 type="password"
+                 class="form-control" />
         </div>
         <a href="#">Forgot password</a>
         <div class="login_btn">
           <button
-                  type="button"
-                  (click)="onLogin()"
+                  type="submit"
+                  [disabled]="!authForm.valid"
                   class="btn btn-success">Sign in</button>
         </div>
       </div>
-    </div>
+    </form>
   </div>
-</main>
+</main>k
