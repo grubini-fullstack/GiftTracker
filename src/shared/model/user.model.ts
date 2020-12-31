@@ -15,7 +15,7 @@ export class User {
   private socialwishlist: Item[];
   private friends: User[];
 
-  constructor(id: string, firstname: string, lastname: string, email: string, phone: string, notifications: boolean, username: string, password: string, birthday: Date, watchlist: Item[], wishlist: Item[], socialwishlist: Item[], friends: User[]) {
+  constructor(id: string, firstname: string, lastname: string, email: string, phone: string, username: string, password: string, birthday: Date, friends: User[], watchlist: Item[], wishlist: Item[], notifications: boolean, socialwishlist: Item[]) {
     this.__id = id;
     this.firstname = firstname;
     this.lastname = lastname;
