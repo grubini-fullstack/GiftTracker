@@ -24,20 +24,21 @@ import { SearchbarComponent } from './dashboard/product/searchbar/searchbar.comp
 import { ItemComponent } from './dashboard/watchlist/item/item.component';
 import { RetailerComponent } from './dashboard/product/retailer/retailer.component';
 import { ProductDetailComponent } from './dashboard/product/product-detail/product-detail.component';
+import { AuthGuard } from 'src/shared/guard/auth.guard';
 
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'products', component: ProductComponent },
-  { path: 'watchlist', component: WatchlistComponent },
-  { path: 'wishlist', component: WishlistComponent },
-  { path: 'birthdaytracker', component: BirthdaytrackerComponent },
-  { path: 'orders', component: OrderComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'notifications', component: NotificationComponent },
-  { path: 'history', component: HistoryComponent },
-  { path: 'payment', component: PaymentComponent },
+  { path: 'watchlist', component: WatchlistComponent, canActivate: [AuthGuard] },
+  { path: 'wishlist', component: WishlistComponent, canActivate: [AuthGuard] },
+  { path: 'birthdaytracker', component: BirthdaytrackerComponent, canActivate: [AuthGuard] },
+  { path: 'orders', component: OrderComponent, canActivate: [AuthGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'notifications', component: NotificationComponent, canActivate: [AuthGuard] },
+  { path: 'history', component: HistoryComponent, canActivate: [AuthGuard] },
+  { path: 'payment', component: PaymentComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

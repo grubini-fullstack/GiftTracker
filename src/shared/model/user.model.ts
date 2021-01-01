@@ -1,124 +1,96 @@
+import { Session } from './session.model';
 import { Item } from './item.model';
 
 export class User {
-  private __id: string;
-  private firstname: string;
-  private lastname: string;
-  private email: string;
-  private phone: string;
-  private notifications: boolean;
-  private username: string;
-  private password: string;
-  private birthday: Date;
-  private watchlist: Item[];
-  private wishlist: Item[];
-  private socialwishlist: Item[];
-  private friends: User[];
+  private _firstname: string;
+  private _lastname: string;
+  private _session: Session;
+  private _email?: string;
+  private _phone?: string;
+  private _notifications?: boolean;
+  private _birthday?: Date;
+  private _watchlist?: Item[];
+  private _wishlist?: Item[];
+  private _socialwishlist?: Item[];
+  private _friends?: User[];
 
-  constructor(id: string, firstname: string, lastname: string, email: string, phone: string, username: string, password: string, birthday: Date, friends: User[], watchlist: Item[], wishlist: Item[], notifications: boolean, socialwishlist: Item[]) {
-    this.__id = id;
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.email = email;
-    this.phone = phone;
-    this.notifications = notifications;
-    this.username = username;
-    this.password = password;
-    this.birthday = birthday;
-    this.watchlist = watchlist;
-    this.wishlist = wishlist;
-    this.socialwishlist = socialwishlist;
-    this.friends = friends;
+  constructor(firstname: string, lastname: string, session: Session) {
+    this._firstname = firstname;
+    this._lastname = lastname;
+    this._session = session;
   }
 
-  public get__id(): string {
-    return this.__id;
+  public get firstname(): string {
+    return this._firstname;
   }
-  public set__id(__id: string): void {
-    this.__id = __id;
-  }
-
-  public getFirstname(): string {
-    return this.firstname;
-  }
-  public setFirstname(firstname: string): void {
-    this.firstname = firstname;
+  public set firstname(firstname: string) {
+    this._firstname = firstname;
   }
 
-  public getLastname(): string {
-    return this.lastname;
+  public get lastname(): string {
+    return this._lastname;
   }
-  public setLastname(lastname: string): void {
-    this.lastname = lastname;
-  }
-
-  public getEmail(): string {
-    return this.email;
-  }
-  public setEmail(email: string): void {
-    this.email = email;
+  public set lastname(lastname: string) {
+    this._lastname = lastname;
   }
 
-  public getPhone(): string {
-    return this.phone;
-  }
-  public setPhone(phone: string): void {
-    this.phone = phone;
+  public get session(): Session {
+    return this._session;
   }
 
-  public isNotifications(): boolean {
-    return this.notifications;
+  public get email(): string {
+    return this._email || '';
   }
-  public setNotifications(notifications: boolean): void {
-    this.notifications = notifications;
-  }
-
-  public getUsername(): string {
-    return this.username;
-  }
-  public setUsername(username: string): void {
-    this.username = username;
+  public set email(email: string) {
+    this._email = email;
   }
 
-  public getPassword(): string {
-    return this.password;
+  public get phone(): string {
+    return this._phone || '';
   }
-  public setPassword(password: string): void {
-    this.password = password;
-  }
-
-  public getBirthday(): Date {
-    return this.birthday;
-  }
-  public setBirthday(birthday: Date): void {
-    this.birthday = birthday;
+  public set phone(phone: string) {
+    this._phone = phone;
   }
 
-  public getWatchlist(): Item[] {
-    return this.watchlist;
+  public get notifications(): boolean {
+    return this._notifications || false;
   }
-  public setWatchlist(watchlist: Item[]): void {
-    this.watchlist = watchlist;
-  }
-
-  public getWishlist(): Item[] {
-    return this.wishlist;
-  }
-  public setWishlist(wishlist: Item[]): void {
-    this.wishlist = wishlist;
+  public set notifications(notifications: boolean) {
+    this._notifications = notifications;
   }
 
-  public getSocialwishlist(): Item[] {
-    return this.socialwishlist;
+  public get birthday(): Date {
+    return this._birthday || new Date();
   }
-  public setSocialwishlist(socialwishlist: Item[]): void {
-    this.socialwishlist = socialwishlist;
+  public set birthday(birthday: Date) {
+    this._birthday = birthday;
   }
 
-  public getFriends(): User[] {
-    return this.friends;
+  public get watchlist(): Item[] {
+    return this._watchlist || [];
   }
-  public setFriends(friends: User[]): void {
-    this.friends = friends;
+  public set watchlist(watchlist: Item[]) {
+    this._watchlist = watchlist;
+  }
+
+  public get wishlist(): Item[] {
+    return this._wishlist || [];
+  }
+  public set wishlist(wishlist: Item[]) {
+    this._wishlist = wishlist;
+  }
+
+  public get socialwishlist(): Item[] {
+    return this._socialwishlist || [];
+  }
+  public set socialwishlist(socialwishlist: Item[]) {
+    this._socialwishlist = socialwishlist;
+  }
+
+  public get friends(): User[] {
+    return this._friends || [];
+  }
+  public set friends(friends: User[]) {
+    this._friends = friends;
   }
 }
