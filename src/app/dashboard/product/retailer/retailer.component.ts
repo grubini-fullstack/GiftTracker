@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Item } from 'src/shared/model/item.model';
 
 @Component({
   selector: 'app-retailer',
@@ -6,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./retailer.component.scss']
 })
 export class RetailerComponent implements OnInit {
+  @Input() item: Item;
   wishlist = false;
   watchlist = false;
-  inStock = true;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,5 +24,9 @@ export class RetailerComponent implements OnInit {
       this.watchlist = !this.watchlist;
     }
   }
+  onBuyNow(url: string) {
 
+    console.log('this is the url , ', url)
+    window.location.href = url;
+  }
 }

@@ -1,10 +1,10 @@
 <main>
   <div class="image">
-    <img src="https://cdn.vox-cdn.com/thumbor/Lf9aj9A_nn0uScv_yetBXFf8YAA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10806197/2018_rebrand_blog_logo_LEAD_ART.jpg" />
+    <img [src]="item.image" />
   </div>
   <div class="content">
     <div class="productdetail">
-      <p>Play Station Five bundle</p>
+      <p>{{ item.name }}</p>
       <div>includes:</div>
       <ul>
         <li>console</li>
@@ -15,17 +15,20 @@
   </div>
   <div class="detail">
     <div class="price">
-      <h1>$24.99</h1>
+      <h1>${{ item.salesPrice }}</h1>
     </div>
 
     <div
-         [ngClass]="inStock ? 'instock' : 'outstock'"
+         [ngClass]="item.onlineAvailability ? 'instock' : 'outstock'"
          class="availability">
-      <p [innerText]="inStock ? 'In Stock' : 'Out of Stock'"></p>
+      <p [innerText]="item.onlineAvailability ? 'In Stock' : 'Out of Stock'"></p>
     </div>
 
     <div class="categories">
-      <button type="button" class="btn btn-success buy">Buy now</button>
+      <div
+           type="button"
+           (click)="onBuyNow(item.addCartUrl)"
+           class="btn btn-success buy">Buy now</div>
       <div class="wish">
         <span
               class="icon"

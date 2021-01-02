@@ -1,49 +1,80 @@
 export class Item {
-  private name: string;
-  private store: string;
-  private price: number;
-  private detail: string;
-  private itemlink: string;
-  private date_created: Date;
-  private availableonline: boolean;
-  private availableinstore: boolean;
+  private _name: string;
+  private _store: string;
+  private _regularPrice: string;
+  private _salePrice: string;
+  private _condition: string;
+  private _details: { name: string, values: string[] }[];
+  private _freeShipping: boolean;
+  private _addToCartUrl: string;
+  private _color: string;
+  private _features: { feature: string }[];
+  private _includedItemList: { includedItem: string }[];
+  private _onlineAvailability: boolean;
+  private _modelNumber: string;
+  private _image: string;
 
-  constructor(name: string, store: string, price: number, detail: string, itemlink: string, date_created: Date, availableonline: boolean, availableinstore: boolean) {
-    this.name = name;
-    this.store = store;
-    this.price = price;
-    this.detail = detail;
-    this.itemlink = itemlink;
-    this.date_created = date_created;
-    this.availableonline = availableonline;
-    this.availableinstore = availableinstore;
+  constructor(name: string, store: string, regularPrice: string, salePrice: string,
+    condition: string, details: { name: string, values: string[] }[], freeShipping: boolean,
+    addToCartUrl: string, color: string, features: { feature: string }[],
+    includedItemList: { includedItem: string }[], onlineAvailability: boolean, modelNumber: string,
+    image: string) {
+    this._name = name;
+    this._store = store;
+    this._regularPrice = regularPrice;
+    this._salePrice = salePrice;
+    this._condition = condition;
+    this._details = details;
+    this._freeShipping = freeShipping;
+    this._addToCartUrl = addToCartUrl;
+    this._color = color;
+    this._features = features;
+    this._includedItemList = includedItemList;
+    this._onlineAvailability = onlineAvailability;
+    this._modelNumber = modelNumber;
+    this._image = image;
   }
 
-  public getName(): string {
-    return this.name;
+  public get name(): string {
+    return this._name;
   }
-  public setName(name: string): void {
-    this.name = name;
+  public get store(): string {
+    return this._store;
   }
-  public getStore(): string {
-    return this.store;
+  public get regularPrice(): string {
+    return this._regularPrice;
   }
-  public getPrice(): number {
-    return this.price;
+  public get salesPrice(): string {
+    return this._salePrice;
   }
-  public getDetail(): string {
-    return this.detail;
+  public get condition(): string {
+    return this._condition;
   }
-  public getItemlink(): string {
-    return this.itemlink;
+  public get details(): { name: string, values: string[] }[] {
+    return this._details;
   }
-  public getDate_created(): Date {
-    return this.date_created;
+  public get freeShipping(): boolean {
+    return this._freeShipping;
   }
-  public isAvailableonline(): boolean {
-    return this.availableonline;
+  public get addCartUrl(): string {
+    return this._addToCartUrl;
   }
-  public isAvailableinstore(): boolean {
-    return this.availableinstore;
+  public get color(): string {
+    return this._color;
+  }
+  public get features(): { feature: string }[] {
+    return this._features;
+  }
+  public get included(): { includedItem: string }[] {
+    return this._includedItemList;
+  }
+  public get onlineAvailability(): boolean {
+    return this._onlineAvailability;
+  }
+  public get modelNumber(): string {
+    return this._modelNumber;
+  }
+  public get image(): string {
+    return this._image;
   }
 }

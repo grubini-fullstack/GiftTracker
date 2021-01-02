@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/shared/service/product.service';
 
 @Component({
   selector: 'app-searchbar',
@@ -7,15 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchbarComponent implements OnInit {
   public status = true;
+  public keyword = '';
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
   }
 
   onSearch() {
-    console.log('I am searching this')
-    console.log('chuu pressedd!!')
+    this.productService.search(this.keyword);
+    this.keyword = '';
   }
   onEnable() {
     this.status = !this.status;

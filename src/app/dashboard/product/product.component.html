@@ -1,12 +1,17 @@
 <main>
   <app-searchbar class="search"></app-searchbar>
   <section class="maingrid">
-    <div class="productdetail">
+    <!-- <div class="productdetail">
       <app-product-detail></app-product-detail>
-    </div>
+    </div> -->
 
-    <div class="retailers">
-      <app-retailer *ngFor="let retailer of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"></app-retailer>
+    <div class="retailers" *ngIf="products.length > 0; else elseBlock">
+      <app-retailer *ngFor="let product of products" [item]="product"></app-retailer>
     </div>
+    <ng-template #elseBlock>
+      <div class="searchgift">
+        <img src="https://lh3.googleusercontent.com/proxy/GiM1xS8Dza6XHB55rCEAYC2yNU_W18mg9i7A8kkv10zsjKunYtA2Rl7X2q8He9DnUwqvor66GPkjzacZ-5O6NiBBujGaOG0_t8UBIu-Hcq-DlPaSXDAtsgKRe6cBAj5VbqCu6Ize4w" />
+      </div>
+    </ng-template>
   </section>
 </main>

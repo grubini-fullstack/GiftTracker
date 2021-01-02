@@ -7,13 +7,21 @@ main {
 display: grid;
 height: 80vh;
 margin-top: 1.5%;
-grid-template-columns: 3fr 9fr;
+grid-template-columns: 1fr;
 }
 .productdetail {
   height: 100%;
   width: 100%;
 }
 .retailers {
-  margin-left: 3.8%;
   overflow-y: scroll;
+}
+.searchgift {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.searchgift > h5 {
+  margin-top: 2%;
 }

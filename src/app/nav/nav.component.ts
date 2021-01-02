@@ -13,7 +13,6 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.user.subscribe(user => {
-      console.log(user)
       if (user.session.id !== '') {
         this.isAuthenticated = true;
       } else {
