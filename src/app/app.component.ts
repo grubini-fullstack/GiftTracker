@@ -28,10 +28,9 @@ export class AppComponent implements OnInit {
       }
     });
 
+    this.authService.autoLogin();
+
     this.authService.user.subscribe(user => {
-      console.log('this is the type of user ,,', user)
-      console.log('is authenticated, ', this.isAuthenticated)
-      console.log('this is the sesh, ', user.session)
       if (user.session.id !== '') {
         this.isAuthenticated = true;
       } else {

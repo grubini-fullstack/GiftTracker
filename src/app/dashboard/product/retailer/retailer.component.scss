@@ -17,6 +17,8 @@ p {
 }
 ul {
   display: grid;
+  height: 54px;
+  overflow-y: scroll;
   grid-template-columns: 1fr 1fr;
   padding-bottom: 0;
   margin-bottom: 0;
@@ -92,7 +94,10 @@ ul {
   flex: 1;
 }
 .productdetail > p {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  height: 84px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .productdetail > p {
   font-size: $product_title;

@@ -5,19 +5,27 @@ export class User {
   private _firstname: string;
   private _lastname: string;
   private _session: Session;
-  private _email?: string;
-  private _phone?: string;
+  private _email: string;
+  private _phone: string;
   private _notifications?: boolean;
-  private _birthday?: Date;
-  private _watchlist?: Item[];
-  private _wishlist?: Item[];
-  private _socialwishlist?: Item[];
-  private _friends?: User[];
+  private _birthday: Date;
+  private _watchlist: Item[];
+  private _wishlist: Item[];
+  private _socialwishlist: Item[];
+  private _friends: User[];
 
-  constructor(firstname: string, lastname: string, session: Session) {
+  constructor(firstname: string, lastname: string, session: Session, email: string, phone: string, notification: boolean, birthday: Date, watchlist: Item[], wishlist: Item[], socialwishlist: Item[], friends: User[]) {
     this._firstname = firstname;
     this._lastname = lastname;
     this._session = session;
+    this._email = email;
+    this._phone = phone;
+    this._notifications = notification;
+    this._birthday = birthday;
+    this._watchlist = watchlist;
+    this._wishlist = wishlist;
+    this._socialwishlist = socialwishlist;
+    this._friends = friends;
   }
 
   public get firstname(): string {

@@ -1,10 +1,11 @@
 export class Item {
+  // private _brand: string;
   private _name: string;
   private _store: string;
   private _regularPrice: string;
   private _salePrice: string;
   private _condition: string;
-  private _details: { name: string, values: string[] }[];
+  private _details: { name: string, value: string }[];
   private _freeShipping: boolean;
   private _addToCartUrl: string;
   private _color: string;
@@ -15,7 +16,7 @@ export class Item {
   private _image: string;
 
   constructor(name: string, store: string, regularPrice: string, salePrice: string,
-    condition: string, details: { name: string, values: string[] }[], freeShipping: boolean,
+    condition: string, details: { name: string, value: string }[], freeShipping: boolean,
     addToCartUrl: string, color: string, features: { feature: string }[],
     includedItemList: { includedItem: string }[], onlineAvailability: boolean, modelNumber: string,
     image: string) {
@@ -38,6 +39,9 @@ export class Item {
   public get name(): string {
     return this._name;
   }
+  // public get brand(): string {
+  //   return this._brand;
+  // }
   public get store(): string {
     return this._store;
   }
@@ -50,7 +54,7 @@ export class Item {
   public get condition(): string {
     return this._condition;
   }
-  public get details(): { name: string, values: string[] }[] {
+  public get details(): { name: string, value: string }[] {
     return this._details;
   }
   public get freeShipping(): boolean {

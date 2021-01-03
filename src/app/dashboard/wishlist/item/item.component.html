@@ -1,0 +1,13 @@
+<div class="card" href="#">
+  <div class="card__background" [ngStyle]="{'background-image': 'url(' + item.image + ')'}"></div>
+  <div class="card__content">
+    <div class="uppercontent">
+      <p class="card__category">Sony</p>
+      <h3 class="card__heading">{{ item.name }}</h3>
+    </div>
+    <div class="lowercontent">
+      <h5>${{ item.salesPrice }}</h5>
+      <p [innerText]="item.freeShipping ? 'Free shipping' : 'Shipping Extra'"></p>
+    </div>
+  </div>
+</div>

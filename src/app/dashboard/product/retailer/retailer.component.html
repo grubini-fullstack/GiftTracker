@@ -7,9 +7,7 @@
       <p>{{ item.name }}</p>
       <div>includes:</div>
       <ul>
-        <li>console</li>
-        <li>free game</li>
-        <li>controller</li>
+        <li *ngFor="let includedItem of item.included">{{ includedItem.includedItem }}</li>
       </ul>
     </div>
   </div>
@@ -30,18 +28,18 @@
            (click)="onBuyNow(item.addCartUrl)"
            class="btn btn-success buy">Buy now</div>
       <div class="wish">
-        <span
-              class="icon"
-              (click)="changeColor('heart')"
-              [ngStyle]="{color: wishlist ? 'red' : 'black'}">
+        <div
+             class="icon"
+             (click)="changeColor('wishlist')"
+             [ngStyle]="{color: wishlist ? 'red' : 'black'}">
           <i class="fa fa-heart"></i>
-        </span>
-        <span
-              class="icon"
-              (click)="changeColor('watch')"
-              [ngStyle]="{color: watchlist ? 'dodgerblue' : 'black'}">
+        </div>
+        <div
+             class="icon"
+             (click)="changeColor('watchlist')"
+             [ngStyle]="{color: watchlist ? 'dodgerblue' : 'black', pointerEvents: isAuthenticated}">
           <i class="fa fa-camera"></i>
-        </span>
+        </div>
       </div>
     </div>
   </div>
