@@ -15,12 +15,10 @@ export class WishlistComponent implements OnInit {
   constructor(private authService: AuthService, private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.authService.user.pipe(
-      map(user => {
-        return user.wishlist.map((item: any) => new Item(item._name, 'Best Buy', item._regularPrice, item._salePrice,
-          item._condition, item._details, item._freeShipping, item._addToCartUrl, item._color, item._features, item._includedItemList, item._onlineAvailability, item._modelNumber, item._image))
-      })
-    ).subscribe((wishlist) => this.wishlist = wishlist);
+    this.productService.getWishList();
+    this.productService.items.subscribe(items => {
+      this.wishlist = items;
+    });
   }
 
 }

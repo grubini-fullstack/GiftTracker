@@ -48,4 +48,25 @@ export class ProductService implements OnInit {
       }
     });
   }
+  getWishList() {
+    this.authService.user
+      .pipe(take(1))
+      .subscribe(user => {
+        this.http.post<any>(
+          'http://127.0.0.1:3000/product/wishlist',
+          { session: user.session }
+        )
+          .pipe(
+            take(1),
+            map(result => result.wishlist),
+            map(wishlist => {
+              return wishlist.map((item: any) => {
+                return new Item(item._name, 'Best Buy', item._regularPrice, item._salePrice, item._condition, item._details, item._freeShipping, item._addToCartUrl, item._color, item._features, item._includedItemList, item._onlineAvailability, item._modelNumber, item._image)
+              })
+            })
+          )
+          .subscribe(wishlist => this.items.next(wishlist));
+      });
+
+  }
 }
