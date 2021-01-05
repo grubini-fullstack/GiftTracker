@@ -1,4 +1,9 @@
 <main>
+  <app-registry
+                class="closed"
+                [register]="register"
+                (registryEvent)="register = $event"
+                [ngClass]="register ? 'open' : ''"></app-registry>
   <div class="topleft scaler">
     <div class="one"></div>
     <div class="two"></div>

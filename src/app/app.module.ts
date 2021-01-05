@@ -25,6 +25,8 @@ import { ItemComponent } from './dashboard/wishlist/item/item.component';
 import { RetailerComponent } from './dashboard/product/retailer/retailer.component';
 import { ProductDetailComponent } from './dashboard/product/product-detail/product-detail.component';
 import { AuthGuard } from 'src/shared/guard/auth.guard';
+import { RegistryComponent } from './registry/registry.component';
+import { InputComponent } from './input/input.component';
 
 
 const appRoutes: Routes = [
@@ -62,6 +64,8 @@ const appRoutes: Routes = [
     ItemComponent,
     RetailerComponent,
     ProductDetailComponent,
+    RegistryComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,7 @@ export class ProductService implements OnInit {
         .pipe(
           take(1),
           map(products => {
+            console.log('the prods, ', products)
             return products.map((item: any) => {
               return new Item(item.name, 'Best Buy', item.regularPrice, item.salePrice, item.condition, item.details, item.freeShipping, item.addToCartUrl, item.color, item.features, item.includedItemList, item.onlineAvailability, item.modelNumber, item.image)
             })

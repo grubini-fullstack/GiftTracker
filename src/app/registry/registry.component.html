@@ -1,0 +1,16 @@
+<main class="disappear" [ngClass]="register ? 'appear' : ''">
+  <h4>Sign up</h4>
+  <div class="wrapper">
+    <app-input *ngFor="let inp of ['First name', 'Last name', 'Email', 'Phone', 'Username', 'Password', 'Birthday']" [inp]="inp"></app-input>
+  </div>
+  <div class="btns">
+
+    <button
+            type="submit"
+            class="btn btn-success">Sign up</button>
+    <button
+            type="submit"
+            (click)="onCancel()"
+            class="btn btn-danger">Cancel</button>
+  </div>
+</main>

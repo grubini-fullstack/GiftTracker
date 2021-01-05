@@ -9,6 +9,7 @@ import { AuthService } from 'src/shared/service/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  register = false;
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
   }
   onSignUp() {
     console.log('i want to sign in');
+    this.register = !this.register;
   }
 
 }
