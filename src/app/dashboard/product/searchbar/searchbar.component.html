@@ -1,0 +1,6 @@
+<div [ngClass]="status ? 'search' : 'search open'">
+  <input [(ngModel)]="keyword" type="search" class="search-box" (keyup.enter)="onSearch()" />
+  <span class="search-button" (click)="onEnable()">
+    <span class="search-icon"></span>
+  </span>
+</div>

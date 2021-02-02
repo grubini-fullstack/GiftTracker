@@ -1,1 +1,7 @@
-<button class="btn btn-success">hey</button>
+<main class="container-fluid">
+  <app-nav></app-nav>
+  <div class="myoutlet">
+    <router-outlet></router-outlet>
+  </div>
+  <app-foot *ngIf="isAuthenticated || appear"></app-foot>
+</main>

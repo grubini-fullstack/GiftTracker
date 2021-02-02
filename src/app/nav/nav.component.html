@@ -1,0 +1,24 @@
+<nav>
+  <div class="left">
+    <div class="logo" routerLink="/">
+      <img src="https://grubini-images.s3.amazonaws.com/gifttracker/gift-box.png" />
+    </div>
+    <h3>tracker</h3>
+  </div>
+  <div class="location dropdown" *ngIf="isAuthenticated; else elseBlock">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZD0ibTUxMiAyNTZjMC0xNDEuNDg4MjgxLTExNC40OTYwOTQtMjU2LTI1Ni0yNTYtMTQxLjQ4ODI4MSAwLTI1NiAxMTQuNDk2MDk0LTI1NiAyNTYgMCAxNDAuMjM0Mzc1IDExMy41MzkwNjIgMjU2IDI1NiAyNTYgMTQxLjg3NSAwIDI1Ni0xMTUuMTIxMDk0IDI1Ni0yNTZ6bS0yNTYtMjI2YzEyNC42MTcxODggMCAyMjYgMTAxLjM4MjgxMiAyMjYgMjI2IDAgNDUuNTg1OTM4LTEzLjU1ODU5NCA4OS40MDIzNDQtMzguNzAzMTI1IDEyNi41MTU2MjUtMTAwLjk2ODc1LTEwOC42MDkzNzUtMjczLjQ0MTQwNi0xMDguODA0Njg3LTM3NC41OTM3NSAwLTI1LjE0NDUzMS0zNy4xMTMyODEtMzguNzAzMTI1LTgwLjkyOTY4Ny0zOC43MDMxMjUtMTI2LjUxNTYyNSAwLTEyNC42MTcxODggMTAxLjM4MjgxMi0yMjYgMjI2LTIyNnptLTE2OC41ODU5MzggMzc2LjVjODkuNzczNDM4LTEwMC42OTUzMTIgMjQ3LjQyMTg3Ni0xMDAuNjcxODc1IDMzNy4xNjc5NjkgMC05MC4wNzQyMTkgMTAwLjc3MzQzOC0yNDcuMDU0Njg3IDEwMC44MDQ2ODgtMzM3LjE2Nzk2OSAwem0wIDAiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48cGF0aCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGQ9Im0yNTYgMjcxYzQ5LjYyNSAwIDkwLTQwLjM3NSA5MC05MHYtMzBjMC00OS42MjUtNDAuMzc1LTkwLTkwLTkwcy05MCA0MC4zNzUtOTAgOTB2MzBjMCA0OS42MjUgNDAuMzc1IDkwIDkwIDkwem0tNjAtMTIwYzAtMzMuMDg1OTM4IDI2LjkxNDA2Mi02MCA2MC02MHM2MCAyNi45MTQwNjIgNjAgNjB2MzBjMCAzMy4wODU5MzgtMjYuOTE0MDYyIDYwLTYwIDYwcy02MC0yNi45MTQwNjItNjAtNjB6bTAgMCIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4=" />
+    <div class="dropdown-content">
+      <a class="dropdown-item" routerLink="/profile">Profile</a>
+      <a class="dropdown-item" routerLink="/history">History</a>
+      <a class="dropdown-item" routerLink="/notifications">Notifications</a>
+      <a class="dropdown-item" routerLink="/payment">Payments</a>
+      <a class="dropdown-item" routerLink="/login" (click)="logout()">Log out</a>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <button
+            type="button"
+            routerLink="/login"
+            class="btn btn-outline-warning">Sign in</button>
+  </ng-template>
+</nav>

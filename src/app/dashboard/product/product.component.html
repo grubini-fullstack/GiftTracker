@@ -1,0 +1,17 @@
+<main>
+  <app-searchbar class="search"></app-searchbar>
+  <section class="maingrid">
+    <!-- <div class="productdetail">
+      <app-product-detail></app-product-detail>
+    </div> -->
+
+    <div class="retailers" *ngIf="products.length > 0; else elseBlock">
+      <app-retailer *ngFor="let product of products" [item]="product"></app-retailer>
+    </div>
+    <ng-template #elseBlock>
+      <div class="searchgift">
+        <img src="https://grubini-images.s3.amazonaws.com/gifttracker/perfectgift.png" />
+      </div>
+    </ng-template>
+  </section>
+</main>
